@@ -5,8 +5,13 @@
         static int Main()
         {
 
-            var peter = new Deck();
-            peter.PrintActive();
+            var pat = new Player("Patrick");
+            List<Player> list = new List<Player>() { pat };
+            Deck deck = new Deck();
+
+            deck.DealCards(list, 18);
+            pat.PrintHand();
+            deck.PrintActive();
             return 0;
         }
 

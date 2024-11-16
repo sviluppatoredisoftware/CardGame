@@ -15,9 +15,10 @@
             IsTrump = false;
             Name = _names[value];
         }
-        public void SetTrump(bool setTrump)
+        public void SetTrump(string suit)
         {
-            IsTrump = setTrump;
+            if (Suit == suit) IsTrump = true;
+            else IsTrump = false;
         }
     }
 }

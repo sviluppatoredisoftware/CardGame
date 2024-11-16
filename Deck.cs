@@ -14,9 +14,7 @@
                 Active.Add(new Card(i, "Clubs"));
                 Active.Add(new Card(i, "Diamonds"));
             }
-            PrintActive();
             Shuffle();
-            PrintActive();
         }
         public void Shuffle()
         {
@@ -29,8 +27,24 @@
                 Active[j] = tmp;
             }
         }
+        public void DealCards(List<Player> players, int cardsPer)
+        {
+            for (int i = 0; i < cardsPer; i++)
+            {
+                foreach (var player in players)
+                {
+                    if (Active.Count > 0)
+                    {
+                        Card card = Active[0];
+                        Active.RemoveAt(0);
+                        player.GiveCard(card);
+                    }
+                }
+            }
+        }
         public void PrintActive()
         {
+            Console.WriteLine("Active Cards:");
             foreach (Card card in Active)
             {
                 Console.WriteLine($"{card.Name} of {card.Suit}");
