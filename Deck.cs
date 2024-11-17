@@ -27,6 +27,11 @@
                 Active[j] = tmp;
             }
         }
+        public void SetTrump()
+        {
+            var trump = Active[Active.Count - 1].Suit;
+            Active.ForEach(x => x.SetTrump(trump));
+        }
         public void DealCards(List<Player> players, int cardsPer)
         {
             for (int i = 0; i < cardsPer; i++)
@@ -47,7 +52,7 @@
             Console.WriteLine("Active Cards:");
             foreach (Card card in Active)
             {
-                Console.WriteLine($"{card.Name} of {card.Suit}");
+                Console.WriteLine($"{card.Name} of {card.Suit} {(card.IsTrump?"Trump":"")}");
             }
         }
         public void PrintInactive()
@@ -57,5 +62,6 @@
                 Console.WriteLine($"{card.Name} of {card.Suit}");
             }
         }
+
     }
 }

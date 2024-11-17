@@ -17,10 +17,10 @@ namespace CardGame
         }
         public void PrintHand()
         {
-            Console.WriteLine($"{Name} has the following cards:");
+            Console.WriteLine($"{Name} has the following Cards:");
             foreach (Card card in Hand)
             {
-                Console.WriteLine($"{card.Name} of {card.Suit}");
+                Console.WriteLine($"{card.Name} of {card.Suit} {(card.IsTrump ? "Trump" : "")}");
             }
         }
     }

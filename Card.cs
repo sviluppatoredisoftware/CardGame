@@ -2,7 +2,7 @@
 {
     internal class Card
     {
-        private static readonly string[] _names = { "", "One","Two", "Three", "Four", "Five", "Six", "Seven", "Eight",
+        static readonly string[] Names = { "", "One","Two", "Three", "Four", "Five", "Six", "Seven", "Eight",
             "Nine", "Ten", "Jack", "Queen", "King", "Ace"};
         public int Value { get; private set; }
         public string Suit { get; private set; }
@@ -13,7 +13,7 @@
             Value = value;
             Suit = suit;
             IsTrump = false;
-            Name = _names[value];
+            Name = Names[value];
         }
         public void SetTrump(string suit)
         {

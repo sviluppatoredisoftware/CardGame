@@ -7,7 +7,8 @@
             var pat = new Player("Patrick");
             List<Player> list = new List<Player>() { pat };
             Deck deck = new Deck();
-
+            deck.Shuffle();
+            deck.SetTrump();
             deck.DealCards(list, 18);
             pat.PrintHand();
             deck.PrintActive();
