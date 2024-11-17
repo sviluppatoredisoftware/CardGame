@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace CardGame
+﻿namespace CardGame
 {
     internal class Player(string name)
     {
