@@ -7,5 +7,10 @@ namespace CardGame
 {
     public class Game
     {
+        public List<Player> ActivePlayers { get; private set; }
+        public Game(List<Player> activePlayers) 
+        {
+            ActivePlayers = activePlayers;
+        }
     }
 }

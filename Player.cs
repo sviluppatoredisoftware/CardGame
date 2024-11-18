@@ -1,6 +1,6 @@
 ﻿namespace CardGame
 {
-    internal class Player(string name)
+    public class Player(string name)
     {
         public string Name { get; private set; } = name;
         public List<Card> Hand { get; private set; } = new List<Card>();
@@ -18,7 +18,9 @@
             Console.WriteLine($"{Name} has the following Cards:");
             foreach (Card card in Hand)
             {
-                Console.WriteLine($"{card.Name} of {card.Suit} {(card.IsTrump ? "Trump" : "")}");
+                Console.WriteLine($"{card.Name} " +
+                    $"of {card.Suit} " +
+                    $"{(card.IsTrump ? "Trump" : "")}");
             }
         }
     }

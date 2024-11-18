@@ -1,6 +1,6 @@
 ﻿namespace CardGame
 {
-    internal class Card
+    public class Card
     {
         static readonly string[] Names = { "", "One","Two", "Three", "Four", "Five", "Six", "Seven", "Eight",
             "Nine", "Ten", "Jack", "Queen", "King", "Ace"};

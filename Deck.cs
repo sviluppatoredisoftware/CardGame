@@ -1,6 +1,6 @@
 ﻿namespace CardGame
 {
-    internal class Deck
+    public class Deck
     {
         public List<Card> Active { get; private set; } = new List<Card>();
         public List<Card> Dead { get; private set; } = new List<Card>();
